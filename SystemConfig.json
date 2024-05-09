@@ -1,0 +1,21 @@
+{
+    "server":{
+        "port":8080,
+        "host":"localhost"
+    },
+    "description":{
+        "titleHeader":"GENARATE  MODEL",
+        "version":"1.0.0",
+        "developer":"Adisorn Vongrod"
+    },
+    "database":[
+        {
+            "database": "pem_iot_report",
+            "user": "root",
+            "password": "rt9125",
+            "host": "localhost",
+            "port": "3306" 
+        }
+    ]
+
+}

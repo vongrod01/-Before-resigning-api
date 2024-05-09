@@ -1,0 +1,31 @@
+{
+  "name": "-before-resigning-api",
+  "version": "1.0.0",
+  "description": "set standard api",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vongrod01/-Before-resigning-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vongrod01/-Before-resigning-api/issues"
+  },
+  "homepage": "https://github.com/vongrod01/-Before-resigning-api#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mysql": "^2.18.1",
+    "nodemon": "^3.1.0",
+    "package.json": "^2.0.1",
+    "uuid": "^9.0.1"
+  }
+}
