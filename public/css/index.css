@@ -1,0 +1,81 @@
+:root {
+
+    --h-search-table-view: 138px;
+    --h-header: 60px;
+    --h-footer: 30px;
+    --h-content-table-view: calc(100vh - var(--h-search-table-view) - var(--h-footer) - var(--h-header) - 28px);
+    
+    --theme-table-view-color: var(--bs-gray-700);
+   
+    --theme-table-view-font-color: #fff;
+  }
+
+
+  
+  #pnlSearchTableView {
+    height: var(--h-search-table-view);
+  }
+  
+  
+  #pnlSearchTableView *.input-group-text.span-layout{
+    background-color: var(--theme-table-view-color) !important;
+    color: var(--theme-table-view-font-color) !important;
+    border: 1px solid var(--theme-table-view-color) !important;
+    display: flex;
+    justify-content: end;
+  }
+  
+  
+  #pnlSearchTableView * input[type=text],
+  #pnlSearchTableView * select,
+  #pnlSearchTableView * select option
+  {
+    background-color: #fff;
+    color: var(--theme-table-view-color);
+  
+  }
+  
+  #pnlSearchTableView *.form-select,
+  #pnlSearchTableView *.form-control{
+    background-color: var(--theme-table-view-font-color) !important;
+    color: var(--theme-table-view-color) !important;
+    border: 1px solid var(--theme-table-view-color) !important;
+  }
+  
+  #pnlSearchTableView *{
+    white-space: nowrap;
+  }
+
+
+  #pnlHeader{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: var(--theme-table-view-color);
+    color: var(--theme-table-view-font-color);
+    height: var(--h-header);
+  }
+  #pnlFooter {
+    height: var(--h-footer);
+  }
+  
+  #pnlContentTableView {
+    height: var(--h-content-table-view);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+  
+  #insp_data_table thead tr th {
+    background-color: var(--theme-table-view-color) !important;
+    color: var(--theme-table-view-font-color);
+  
+    font-weight: bold;
+    padding: 3px;
+    
+    border-bottom-color: #000000 !important;
+  }
+  
+
+  
+  

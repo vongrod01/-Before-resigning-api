@@ -164,8 +164,8 @@ class PartEXE extends BaseClass.BaseEXE {
                 DataVO.Detail,
                 DataVO.Detail2,
                 DataVO.Active,
-                DataVO.AddDate,
-                DataVO.UpdateDate,
+                // DataVO.AddDate,
+                // DataVO.UpdateDate,
                 DataVO.AddBy,
                 DataVO.UpdateBy,
 
@@ -194,8 +194,8 @@ class PartEXE extends BaseClass.BaseEXE {
                 DataVO.Detail,
                 DataVO.Detail2,
                 DataVO.Active,
-                DataVO.AddDate,
-                DataVO.UpdateDate,
+                // DataVO.AddDate,
+                // DataVO.UpdateDate,
                 DataVO.AddBy,
                 DataVO.UpdateBy,
 

@@ -1,0 +1,114 @@
+:root {
+
+    --theme-part-color: #05588f;
+    --theme-part-font-color: #fff;
+  
+    --title-color: #59a3d4;
+  
+    --w-input-part-1:300px;
+
+    --h-search-table-view: 138px;
+    --h-header: 60px;
+    --h-button: 55px;
+    --h-footer: 30px;
+    --h-content-table-view: calc(100vh - var(--h-search-table-view) - var(--h-footer) - var(--h-header) - var(--h-button) - 32px);
+    
+    --theme-table-view-color: var(--bs-gray-700);
+   
+    --theme-table-view-font-color: #fff;
+}
+   
+
+  
+  #pnlSearch {
+    height: var(--h-search);
+  }
+  
+  #pnlButton {
+    height: var(--h-button);
+  }
+  
+  #pnlFooter {
+    height: var(--h-footer);
+    /* background-color: yellow; */
+  }
+  
+  #pnlContent {
+    height: var(--h-content);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+  }
+  
+
+  
+  
+  
+  .display-part-header {
+    background-color: var(--theme-part-color);
+    color: var(--theme-part-font-color);
+  }
+  
+  .display-part-header .modal-title {
+    font-weight: bold;
+    margin: 5px;
+    padding: 5px 5px 5px 10px;
+    color: var(--theme-part-color);
+    background-color: var(--theme-part-font-color);
+    border-radius: 5px;
+  }
+  
+  .display-part-header .modal-title span:nth-child(2) {
+    color: var(--theme-part-font-color);
+    background-color: var(--theme-part-color);
+    padding: 5px 10px 5px 10px;
+    margin-left: 5px;
+    border-radius: 0px 5px 5px 0px;
+  }
+  
+  .display-part-header .btn {
+    color: inherit;
+  }
+  
+  /* :nth-child */
+  #ModalDisplay .modal-content .modal-body {
+    background-color: var(--bs-gray-500);
+  }
+#ModalDisplay .modal-content *:where(input,textarea)
+{
+    border: var(--theme-part-color) solid 1px !important;
+    margin-bottom: 2px;
+    background-color: #fff;
+    color: var(--theme-part-color);
+  }
+#ModalDisplay .modal-content *:where(span.input-group-text)
+{
+    border: var(--theme-part-color) solid 1px !important;
+    margin-bottom: 2px;
+    background-color: var(--theme-part-color) !important;
+    color: #fff !important;
+    font-weight: bold;
+    width: 150px;
+  }
+
+
+  #part_table tbody tr.selected td {
+    background-color: var(--theme-table-view-color) !important;
+    color: var(--theme-table-view-font-color);
+  }
+  
+  #part_table tbody tr td {
+    white-space: nowrap;
+  }
+  
+  #part_table {
+    border-collapse: separate;
+  
+    border-spacing: 0 !important;
+    margin-top: 0 !important;
+  }
+  
+  #boxPartTable {
+    height: calc(var(--h-content-table-view) - 115px);
+    overflow: auto;
+  }
+  
