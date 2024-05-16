@@ -140,38 +140,62 @@ async function showDataSearch() {
     tbody.innerHTML = innerHTML
     collectPartSearch()
 
+    let rows = []
     await reqAndRes('http://localhost:8080/part_api', 'GET', objPartSearch, function (dataRes) {
         dataSet = dataRes
+        //     dataSet.forEach(data => {
+        //         innerHTML += `
+        //       <tr>
+        //         <td>${data.RxNo}</td>
+        //         <td>${data.PartNo}</td>
+        //         <td>${data.PartName}</td>
+        //         <td>${data.Model}</td>
+        //         <td>${data.Production}</td>
+        //         <td>${data.SectionCode}</td>
+        //         <td></td>
+        //         <td>${data.Detail}</td>
+        //         <td>${data.Detail2}</td>
+        //         <td>${data.Active}</td>
+        //         <td>${data.AddDate}</td>
+        //         <td>${data.UpdateDate}</td>
+        //         <td>${data.AddBy}</td>
+        //         <td>${data.UpdateBy}</td>
+        //       </tr>
+        //   `
+
+        //     });
         dataSet.forEach(data => {
-            innerHTML += `
-          <tr>
-            <td>${data.RxNo}</td>
-            <td>${data.PartNo}</td>
-            <td>${data.PartName}</td>
-            <td>${data.Model}</td>
-            <td>${data.Production}</td>
-            <td>${data.SectionCode}</td>
-            <td></td>
-            <td>${data.Detail}</td>
-            <td>${data.Detail2}</td>
-            <td>${data.Active}</td>
-            <td>${data.AddDate}</td>
-            <td>${data.UpdateDate}</td>
-            <td>${data.AddBy}</td>
-            <td>${data.UpdateBy}</td>
-            
-           
-          </tr>
-      `
+            rows.push(
+                [
+                    data.RxNo,
+                    data.PartNo,
+                    data.PartName,
+                    data.Model,
+                    data.Production,
+                    data.SectionCode,
+                    '',
+                    data.Detail,
+                    data.Detail2,
+                    data.Active,
+                    data.AddDate,
+                    data.UpdateDate,
+                    data.AddBy,
+                    data.UpdateBy
+
+                ]
+            )
 
         });
 
+        
+
     })
 
-
-    tbody.innerHTML = innerHTML
-
     $("#part_table").dataTable({
+        data: rows,
+        // createdRow: function (row, data, dataIndex) {
+        //     // หลังจากสร้าง table เสร็จ
+        // },
         ordering: false,
         "lengthMenu": [
             [25, 50, 100, -1],
@@ -182,8 +206,24 @@ async function showDataSearch() {
             items: 'row',
 
         },
+    })   
 
-    })
+    // tbody.innerHTML = innerHTML
+
+
+    // $("#part_table").dataTable({
+    //     ordering: false,
+    //     "lengthMenu": [
+    //         [25, 50, 100, -1],
+    //         [25, 50, 100, "All"]
+    //     ],
+    //     "pageLength": 25,
+    //     select: {
+    //         items: 'row',
+
+    //     },
+
+    // })
 
     // #tbTableTroubleAndActionHistory_wrapper <---- datatable genarate ขึ้นมา
     document.getElementById('part_table_wrapper').classList.add('p-2')

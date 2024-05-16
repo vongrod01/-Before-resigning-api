@@ -14,12 +14,12 @@ router.route("/index").get((req, res) => {
 });
 
 router.route("/part").get((req, res) => {
-    
     res.sendFile(path.join(__dirname, '../views/part.html'));
 });
 router.route("/pdf").get((req, res) => {
     res.sendFile(path.join(__dirname, '../views/pdf_viewer.html'));
 });
+
 
 
 module.exports = router;
